@@ -58,7 +58,7 @@ class SleepQualityFragment : Fragment() {
                         this, viewModelFactory).get(SleepQualityViewModel::class.java)
         binding.sleepQualityViewModel = sleepQualityViewModel
         sleepQualityViewModel.navigateToSleepTracker.observe(this, Observer {
-            if (it == true) { // Observed state is true.
+            if (it == true) {
                 this.findNavController().navigate(
                         SleepQualityFragmentDirections.actionSleepQualityFragmentToSleepTrackerFragment())
                 sleepQualityViewModel.doneNavigating()
